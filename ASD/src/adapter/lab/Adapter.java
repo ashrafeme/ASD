@@ -1,10 +1,9 @@
-package adapter;
+package adapter.lab;
 
 
-public class Adapter implements Target {
+public class Adapter implements ITargetStack,ITargetQueue {
 
 	Adaptee adaptee;
-
 	public Adapter() {
 		super();
 		adaptee = new Adaptee();
@@ -36,6 +35,19 @@ public class Adapter implements Target {
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
 		return adaptee.isEmpty();
+	}
+
+	@Override
+	public void queue(String str) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	@Override
+	public String dequeue() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
