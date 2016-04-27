@@ -56,6 +56,12 @@ public class Adaptee {
 		this.end = end;
 	}
 	
+	public int getStart() {
+		return start;
+	}
+	public void setStart(int start) {
+		this.start = start;
+	}
 	public String get(int index){
 		return data[index];
 	}
