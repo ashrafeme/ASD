@@ -1,4 +1,4 @@
-package templatemothed;
+package templatemethod;
 
 public abstract class AOrderProcessor {
 

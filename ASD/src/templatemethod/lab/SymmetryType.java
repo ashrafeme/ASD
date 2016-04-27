@@ -1,4 +1,4 @@
-package templatemothed.lab;
+package templatemethod.lab;
 
 public enum SymmetryType {
 	VERTICAL,
