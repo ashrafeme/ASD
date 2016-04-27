@@ -4,7 +4,7 @@ public abstract class PrintAlphabet {
 
 	
 	public final void PrintLetter(String[][] input) {
-		String[][] completeLetter = new String[10][20];
+		String[][] completeLetter;
 		SymmetryType stype = getSymmetryType(input);
 		switch (stype) {
 		case VERTICAL:
@@ -16,6 +16,7 @@ public abstract class PrintAlphabet {
 			print(completeLetter);
 			break;
 		default:
+			completeLetter = input;
 			print(completeLetter);
 			break;
 		}
