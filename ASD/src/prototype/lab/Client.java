@@ -8,11 +8,14 @@ public class Client {
 
 		Employee emp = createRandomEmployee();
 		emp.setStaff(createRandomStaff(emp));
+		for (int i = 0; i < emp.getStaff().length; i++) {
+			emp.getStaff()[i].setStaff(createRandomStaff(emp.getStaff()[i]));
+		}
 		emp.setSupervisor(createRandomEmployee());
 		try {
 			Employee emp1 = (Employee) emp.clone();
 			System.out.println(emp);
-			//emp1.setId(50);
+			emp1.setId(50);
 			System.out.println(emp1);
 			for (Employee staffEmp : emp1.getStaff()) {
 				System.out.println(staffEmp);
@@ -34,11 +37,13 @@ public class Client {
 		emp.setZipcode("52557");
 		return emp;
 	}
+	
 
 	public static Employee[] createRandomStaff(Employee supervisor) {
 		Employee[] olist = new Employee[10];
 		for (int i = 0; i < olist.length; i++) {
 			olist[i] = createRandomEmployee();
+			//
 			olist[i].setSupervisor(supervisor);
 		}
 		return olist;

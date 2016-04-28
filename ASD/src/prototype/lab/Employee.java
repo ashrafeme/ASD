@@ -66,7 +66,7 @@ public class Employee implements Cloneable, Serializable {
 
 	private void copyEmployeeData(Employee newEmployee, Employee employee) {
 		newEmployee.id = employee.getId();
-		newEmployee.Lastname = employee.getLastname();
+		newEmployee.Lastname = employee.getLastname()+" Clone-"+id;
 		newEmployee.Firstname = employee.getFirstname();
 		newEmployee.streetAddress = employee.getStreetAddress();
 		newEmployee.city = employee.getCity();
@@ -150,12 +150,12 @@ public class Employee implements Cloneable, Serializable {
 	public String toString() {
 		StringBuilder osb = new StringBuilder();
 
-		osb.append("RefrenceId:" + System.identityHashCode(this) + "\n");
+		//osb.append("RefrenceId:" + System.identityHashCode(this) + "\n");
 		osb.append("Id:" + id + "\n");
-		osb.append("FullName:" + Firstname + " " + Lastname + "\n");
-		osb.append("Address:" + streetAddress + "\n");
-		osb.append(city + "," + state + " " + zipcode + "\n");
-		osb.append("SuperVisor:" + supervisor + "\n");
+	//	osb.append("FullName:" + Firstname + " " + Lastname + "\n");
+	//	osb.append("Address:" + streetAddress + "\n");
+	//	osb.append(city + "," + state + " " + zipcode + "\n");
+		osb.append("SuperVisor\n:" + supervisor + "\n");
 		return osb.toString();
 	}
 
