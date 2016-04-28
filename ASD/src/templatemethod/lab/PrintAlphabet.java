@@ -3,32 +3,35 @@ package templatemethod.lab;
 public abstract class PrintAlphabet {
 
 	
-	public final void PrintLetter(String[][] input) {
+	public final void PrintLetter(SymmetryType stype,String[][] input) {
 		String[][] completeLetter;
-		SymmetryType stype = getSymmetryType(input);
+		//SymmetryType stype = getSymmetryType(input);
 		switch (stype) {
 		case VERTICAL:
-			completeLetter = printRight(input);
+			completeLetter = printVertical(input);
 			print(completeLetter);
 			break;
 		case HORIZONTAL:
-			completeLetter = printLower(input);
+			completeLetter = printHorizontal(input);
 			print(completeLetter);
 			break;
 		default:
-			completeLetter = input;
+			completeLetter = printNone(input);
 			print(completeLetter);
 			break;
 		}
 	}
-	public abstract void print(String[][] completeLetter);
-	public abstract String[][] printRight(String[][] input);
-	public abstract String[][] printLower(String[][] input);
-	
-
-	private SymmetryType getSymmetryType(String[][] input) {
-		// TODO Auto-generated method stub
-		return SymmetryType.NONE;
+	public void print(String[][] completeLetter){
+		for (int i = 0; i < completeLetter.length; i++) {
+			for (int j = 0; j < completeLetter[i].length; j++) {
+				System.out.print(completeLetter[i][j]==null?"-":completeLetter[i][j]);
+			}
+			System.out.println();
+		}
 	}
+	public abstract String[][] printVertical(String[][] input);
+	public abstract String[][] printHorizontal(String[][] input);
+	public abstract String[][] printNone(String[][] input);
+	
 
 }
