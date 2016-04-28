@@ -37,7 +37,6 @@ public class Employee implements Cloneable, Serializable {
 
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
 		Employee newEmployee = new Employee();
 		newEmployee.id = id;
 
@@ -49,7 +48,6 @@ public class Employee implements Cloneable, Serializable {
 				newEmployee.staff[i] = (Employee) staff[i].clone();
 			}
 		}
-
 		return newEmployee;
 	}
 
