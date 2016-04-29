@@ -53,6 +53,7 @@ public class Employee implements Cloneable, Serializable {
 			newEmployee.staff = new Employee[staff.length];
 			for (int i = 0; i < staff.length; i++) {
 				newEmployee.staff[i] = (Employee) staff[i].clone();
+				newEmployee.staff[i].setSupervisor(newEmployee);
 			}
 		}
 		return newEmployee;
@@ -150,7 +151,7 @@ public class Employee implements Cloneable, Serializable {
 	public String toString() {
 		StringBuilder osb = new StringBuilder();
 
-		//osb.append("RefrenceId:" + System.identityHashCode(this) + "\n");
+		osb.append("RefrenceId:" + System.identityHashCode(this) + "\n");
 		osb.append("Id:" + id + "\n");
 	//	osb.append("FullName:" + Firstname + " " + Lastname + "\n");
 	//	osb.append("Address:" + streetAddress + "\n");
