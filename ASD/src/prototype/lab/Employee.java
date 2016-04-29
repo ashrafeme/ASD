@@ -46,7 +46,6 @@ public class Employee implements Cloneable, Serializable {
 	protected Object clone() throws CloneNotSupportedException {
 		Employee newEmployee = new Employee();
 		copyEmployeeData(newEmployee, this);
-
 		if (supervisor != null)
 			newEmployee.supervisor = cloneSupervisor(supervisor);
 		if (staff != null && staff.length > 0) {
