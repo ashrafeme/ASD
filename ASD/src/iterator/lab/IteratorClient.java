@@ -1,4 +1,4 @@
-package iterator;
+package iterator.lab;
 
 public class IteratorClient {
 
