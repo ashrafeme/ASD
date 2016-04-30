@@ -2,11 +2,9 @@ package iterator.lab;
 
 import java.util.function.Predicate;
 
-
-
 public class NameRepository implements Aggregate {
 
-	private String names[][] = { { "ashraf", "ezzat", "elsayed" }, { "david", "Nyaika" }, { "Yongchao", "Zhang" } };
+	private String names[][] = { { "ashraf", "-", "elsayed" }, { "david", "Nyaika" }, { "Yongchao", "Zhang" } };
 
 	public void add(String firstName, String lastName) {
 
@@ -32,10 +30,11 @@ public class NameRepository implements Aggregate {
 		@Override
 		public Object next() {
 			if (hasNext()) {
-				yindex++;
-				String nextName = names[index][yindex];
-				if (yindex == names[index].length)
+				String nextName = names[index][yindex++];
+				if (yindex == names[index].length) {
 					index++;
+					yindex = 0;
+				}
 				if (!checkString.test(nextName))
 					return nextName;
 				else
