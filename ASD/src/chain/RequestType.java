@@ -4,5 +4,6 @@ public enum RequestType {
 
 	JUNIOR,
 	SENIOR,
-	SUPERVISOR
+	SUPERVISOR,
+	MANAGER
 }
