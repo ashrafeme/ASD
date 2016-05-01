@@ -1,8 +1,8 @@
 package chain;
 
-public enum RquestType {
+public enum RequestType {
 
 	JUNIOR,
 	SENIOR,
-	MANAGER
+	SUPERVISOR
 }
