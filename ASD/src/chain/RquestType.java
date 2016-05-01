@@ -1,4 +1,4 @@
-package Chain;
+package chain;
 
 public enum RquestType {
 
