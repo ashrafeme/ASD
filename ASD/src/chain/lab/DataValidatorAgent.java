@@ -18,7 +18,10 @@ public class DataValidatorAgent extends DataAgent {
 	}
 
 	public boolean isRecordValide(CallRecord callrecord) {
-		return (callrecord != null && callrecord.getCustomer() != null && callrecord.getCustomer().getAddress() != null
-				&& callrecord.getCustomer().getPhone() != null && callrecord.getCustomer().getEmail() != null);
+		return (callrecord != null 
+				&& callrecord.getCustomer() != null 
+				&& callrecord.getCustomer().getAddress() != null
+				&& callrecord.getCustomer().getPhone() != null 
+				&& callrecord.getCustomer().getEmail() != null);
 	}
 }
