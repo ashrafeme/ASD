@@ -4,7 +4,7 @@ public class GiftItem {
 	private String giftId;
 	private String giftName;
 	private String description;
-	private String packagingType; //"bag", "box", or "wrap".
+	private PackagingType packagingType; //"bag", "box", or "wrap".
 	private Packaging packaging;
 	public String getGiftId() {
 		return giftId;
@@ -24,17 +24,18 @@ public class GiftItem {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getPackagingType() {
-		return packagingType;
-	}
-	public void setPackagingType(String packagingType) {
-		this.packagingType = packagingType;
-	}
+	
 	public Packaging getPackaging() {
 		return packaging;
 	}
 	public void setPackaging(Packaging packaging) {
 		this.packaging = packaging;
+	}
+	public PackagingType getPackagingType() {
+		return packagingType;
+	}
+	public void setPackagingType(PackagingType packagingType) {
+		this.packagingType = packagingType;
 	}
 
 }

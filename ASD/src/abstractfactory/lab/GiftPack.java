@@ -5,7 +5,7 @@ import java.util.List;
 public class GiftPack {
 	private List<GiftItem> giftItems;
 	private Address shippingAddress;
-	private String packType; //"Business", "Adults", or "Kids"
+	private PackType packType; //"Business", "Adults", or "Kids"
 	public List<GiftItem> getGiftItems() {
 		return giftItems;
 	}
@@ -18,10 +18,11 @@ public class GiftPack {
 	public void setShippingAddress(Address shippingAddress) {
 		this.shippingAddress = shippingAddress;
 	}
-	public String getPackType() {
+	public PackType getPackType() {
 		return packType;
 	}
-	public void setPackType(String packType) {
+	public void setPackType(PackType packType) {
 		this.packType = packType;
 	}
+	
 }
