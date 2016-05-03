@@ -11,7 +11,6 @@ public class GUIBuilder {
 		} else if (System.getProperty("os.name").startsWith("Mac")) {
 			widgetFactory = new MacWidgetFactory();
 		}
-
 	}
 
 	public WidgetFactory getWidgetFactory() {
@@ -25,7 +24,7 @@ public class GUIBuilder {
 			System.out.println("This platform is not being supported.");
 			return;
 		}
-		
+
 		AbstractFrameWidget myFrame = wf.createFrame();
 		AbstractButtonWidget myButton = wf.createButton();
 		AbstractCheckboxWidget myCheckbox = wf.createCheckbox();
