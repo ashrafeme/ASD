@@ -1,16 +1,18 @@
 package facade.lab;
 
 import java.sql.CallableStatement;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public interface IDatabaseManager {
-	public Connection getConnection();
+	public void openConnection() throws SQLException, InstantiationException, IllegalAccessException, ClassNotFoundException;
 
-	public PreparedStatement getPreparedStatement();
+	
 
 	public CallableStatement getCallableStatement();
 	
-	public ResultSet getResultSet();
+	public ResultSet getResultSet() throws SQLException;
+
+	PreparedStatement getPreparedStatement(String sql) throws SQLException;
 }
