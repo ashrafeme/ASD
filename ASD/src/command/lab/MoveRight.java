@@ -17,7 +17,7 @@ public class MoveRight implements ICommand {
 
 	@Override
 	public boolean Undo() {
-		square.UndoMove();
+		square.UndoMoveRight();
 		return true;
 	}
 

@@ -3,32 +3,32 @@ package command.lab;
 public class Square {
 
 	public void MoveRight(int positions) {
-		// TODO Auto-generated method stub
+		System.out.println("Move Right "+positions);
 		
 	}
 
-	public void UndoMove() {
-		// TODO Auto-generated method stub
+	public void UndoMoveRight() {
+		System.out.println("Undo Move Right");
 		
 	}
 
 	public void Create(int side) {
-		// TODO Auto-generated method stub
+		System.out.println("Create Square "+side);
 		
 	}
 
 	public void UndoCreate() {
-		// TODO Auto-generated method stub
+		System.out.println("Undo Create Square");
 		
 	}
 
 	public void Scale(int scalingFactor) {
-		// TODO Auto-generated method stub
+		System.out.println("Scale "+scalingFactor);
 		
 	}
 
 	public void UndoScale() {
-		// TODO Auto-generated method stub
+		System.out.println("undo Scaling");
 		
 	}
 
