@@ -22,5 +22,4 @@ public class FlyweightFactory {
 	public static ConcreteFlyweight getInstance(int i) {
 		return byColor[i];
 	}
-
 }
