@@ -26,4 +26,22 @@ public class CarControls {
 	public Wet getWetState() {
 		return wetState;
 	}
+
+	public void left() {
+		currentRoadState.left();
+	}
+
+	public void accel() {
+		currentRoadState.accel();
+	}
+
+	public void right() {
+		currentRoadState.right();
+
+	}
+
+	public void brake() {
+		currentRoadState.brake();
+
+	}
 }

@@ -4,26 +4,25 @@ public class Regular implements RoadState {
 
 	@Override
 	public void left() {
-		// TODO Auto-generated method stub
-
+		System.out.println("left on 5");
 	}
 
 	@Override
 	public void accel() {
-		// TODO Auto-generated method stub
-
+		System.out.println("accel on 9");
 	}
 
 	@Override
 	public void right() {
-		// TODO Auto-generated method stub
+		System.out.println("right on 5");
 
 	}
 
 	@Override
 	public void brake() {
-		// TODO Auto-generated method stub
+		System.out.println("breke on 8");
 
 	}
+
 
 }
