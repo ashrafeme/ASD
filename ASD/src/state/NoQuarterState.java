@@ -1,33 +1,39 @@
 package state;
 
 public class NoQuarterState implements State {
+	GumballMachine gumballMachine;
 
 	public NoQuarterState(GumballMachine gumballMachine) {
-		// TODO Auto-generated constructor stub
+		this.gumballMachine = gumballMachine;
 	}
 
 	@Override
 	public void insertQuarter() {
-		// TODO Auto-generated method stub
-
+		System.out.println("InsertQuarter");
+		gumballMachine.setState(gumballMachine.getHasQuarterState());
 	}
 
 	@Override
 	public void ejectQuarter() {
-		// TODO Auto-generated method stub
-
+		System.out.println("no Quarter to Eject");
+		gumballMachine.setState(gumballMachine.getNoQuarterState());
 	}
 
 	@Override
 	public void turnCrank() {
-		// TODO Auto-generated method stub
-
+		System.out.println("please Insert Quarter");
+		gumballMachine.setState(gumballMachine.getNoQuarterState());
 	}
 
 	@Override
 	public void dispense() {
-		// TODO Auto-generated method stub
+		System.out.println("please Insert Quarter");
+		gumballMachine.setState(gumballMachine.getNoQuarterState());
+	}
 
+	@Override
+	public String toString() {
+		return "No Quarter State";
 	}
 
 }

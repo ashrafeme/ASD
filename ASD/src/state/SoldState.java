@@ -2,26 +2,29 @@ package state;
 
 public class SoldState implements State {
 
+	private GumballMachine gumballMachine;
+
 	public SoldState(GumballMachine gumballMachine) {
-		// TODO Auto-generated constructor stub
+		this.gumballMachine = gumballMachine;
 	}
 
 	@Override
 	public void insertQuarter() {
-		// TODO Auto-generated method stub
+		System.out.println("only one quarter");
 
 	}
 
 	@Override
 	public void ejectQuarter() {
-		// TODO Auto-generated method stub
+		System.out.println("only one quarter");
 
 	}
 
 	@Override
 	public void turnCrank() {
-		// TODO Auto-generated method stub
-
+		System.out.println("your gumball in the way");
+		gumballMachine.setCount( gumballMachine.getCount()-1);
+		gumballMachine.setState(gumballMachine.getNoQuarterState());
 	}
 
 	@Override
@@ -29,5 +32,11 @@ public class SoldState implements State {
 		// TODO Auto-generated method stub
 
 	}
+	
+	@Override
+	public String toString() {
+		return "Sold State";
+	}
+
 
 }
