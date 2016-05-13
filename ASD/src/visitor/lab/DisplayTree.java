@@ -9,7 +9,6 @@ public class DisplayTree {
 		for (Component item : trees.getChild()) {
 			item.accept(visitor);
 		}
-
 	}
 
 }
